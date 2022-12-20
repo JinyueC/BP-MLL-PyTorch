@@ -4,6 +4,7 @@ from torch.nn.modules.module import Module
 from torch.nn.parameter import Parameter
 from torch.autograd import Function
 
+# forward
 def bp_forward(c_label, c_out):
     c_bar_label = 1 - c_label # false label
     dim = len(c_label) # dimension of labels
@@ -22,7 +23,7 @@ def bp_forward(c_label, c_out):
 
     return Err
 
-    # backward loss
+# backward 
 def bp_backward(c_label, c_out):
     dim = len(c_label) # dimension of labels 6
     # scalar
