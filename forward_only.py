@@ -2,7 +2,7 @@ import numpy as np
 import torch
 from torch.nn.modules.module import Module
 
-
+# the autograd result is tested against hand-written result which turns out to be correct.
 class BpmllLoss(Module):
     def __init__(self):
         super(BpmllLoss, self).__init__()
